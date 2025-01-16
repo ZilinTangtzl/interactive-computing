@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 06: Gesture Control Game - Design Overview</title>
+    <style>
+        body {
+            background-color: #e0ebe0;
+            color: #2c3e50;
+            font-family: Tahoma, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #f89e9e;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #designOverview {
+            width: 80%;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        #screenshots img {
+            width: 80%;
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px;
+            
+        }
+
+        a {
+            color: #f89e9e;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #ff8a8a;
+        }
+    </style>
+</head>
+<body>
+    <h1>Assignment 06: Gesture Control Game</h1>
+
+    <div id="designOverview">
+        <h2>Overview</h2>
+        <p>For this assignment, I created a simple gesture-controlled game using webcam input. I was inspired by classic arcade games but wanted to make it more interactive by using motion detection. The basic idea is that players can control the game character by waving their hands, which I thought would be more fun than just using keyboard controls.</p>
+
+        <h2>Design Process</h2>
+        <p>I chose a guava-like pink and avocado green color scheme because I wanted something that looked relaxing and warm. The main challenge was figuring out how to accurately detect different hand movements. I also added the "clear all obstacles" special move to give players a way to clear the screen, but has a cooldown for it. Besides that, I added a camera toggle button so players can choose between seeing the webcam feed or just enjoying the gradient background with falling snow effect.</p>
+    </div>
+
+    <div id="screenshots">
+        <h2>Game Screenshots</h2>
+        <img src="images/game1.png" alt="Gameplay Screenshot">
+    </div>
+
+    <div id="playGameLink" style="text-align: center; margin-top: 30px;">
+        <h2>Try It Out</h2>
+        <p>Click <a href="index.html">here</a> to play the game!</p>
+    </div>
+
+    <footer style="text-align: center; margin-top: 30px;">
+        <p><a href="../index.html">Back to Portfolio</a></p>
+    </footer>
+</body>
+</html>

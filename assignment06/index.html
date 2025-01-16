@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesture Control Game</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.min.js"></script>
+    <script src="sketch.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gesture Control Game</h1>
+        <p class="subtitle">
+            Use gestures to control the game!<br>
+            Wave your hands to move and clear obstacles.
+        </p>
+        
+        <div class="control-info">
+            <div>
+                <span>👈</span> Wave LEFT to move
+            </div>
+            <div>
+                <span>👉</span> Wave RIGHT to move
+            </div>
+            <div>
+                <span>👐</span> Wave BOTH to clear
+            </div>
+            <div>
+                <span>🎥</span>
+                <button id="toggleVideo" class="mini-btn">Camera On/Off</button>
+            </div>
+        </div>
+        
+        <div id="game-container">
+
+        </div>
+    </div>
+</body>
+</html>

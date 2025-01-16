@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Play</title>
+    <style>
+        @font-face {
+            font-family: 'OldLondon';
+            src: url('js/fonts/OldLondon.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'Sherwood';
+            src: url('js/fonts/Sherwood.ttf') format('truetype');
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Sherwood', sans-serif;
+            background: linear-gradient(to bottom, #d0b9dd, #2b0475);
+        }
+
+        .container {
+            background-size: cover;
+            padding: 20px;
+            background-image: url('js/images/background.png');
+            box-shadow: 0 4px 8px rgba(220, 217, 227, 0.2);
+            border-radius: 8px;
+            overflow-y: auto;
+            max-height: 80vh;
+            position: relative;
+        }
+        p{
+            font-family: 'OldLondon', serif;
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #41156c;
+
+        }
+        h1 {
+            font-family: 'OldLondon', serif;
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #41156c;
+        }
+
+        .content {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #2d2d9e;
+            text-align: justify;
+        }
+
+        /* Button style for "Return to Home" */
+        .return-button {
+            display: inline-block;
+            font-size: 16px;
+            padding: 10px 20px;
+            color: #ffffff;
+            background-color: #41156c;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            font-family: 'Sherwood', sans-serif;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .return-button:hover {
+            background-color: #5a1a9f;
+        }
+
+        /* Audio player style */
+        .audio-player {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="return-button">Return to Home</a>
+    <div class="container">
+        <h1>How to Play</h1>
+        <div class="content">
+            <p>Welcome,dear. </p>
+            <ul>
+                <li>You are Ligeia, and you are a Necromancer.</li>
+                <li>This is your farm...or to say, a ghost farm.</li>
+                <li>This world have no notice to a witch like you,and you enjoyed this life.</li>
+                <li>The only little problem is that your crops...</li>
+                <li>sometimes they turn into something else. </li>
+                <li>But it's all right, you can still harvest them</li>
+                <li>They will be  ghosts and musical notes as you pull them out of ground</li>
+                <li>Okay, now let's get reacquainted with our hands and feet...does this scare you?</li>
+                <li>To move around, use the arrow keys (⬆️⬇️⬅️➡️)</li>
+                <li>For your little farm work, numbers and letters are psychic.</li>
+                <li>Hear me chanted, dear, hear me chanted:</li>
+                <li>'1' for planting, for the start.</li>
+                <li>'2' for watering, use your heart.</li>
+                <li>'3' to harvest, say depart.</li>
+                <li> 'Shift' for action, magic art! </li>
+                
+                <li>Oh, there are other magic you can preform, dear.</li>
+                <li>'C' to cycle,choose through crops.</li>
+                <li>Water the ground, land of sop.</li>
+                <li>Energy of magic, keep you sharp.</li>
+                <li>Stay near water, vigor goes up. </li>
+                <li>But don't stay there too long, things turn upside-down</li>
+                <li>Gold for potion, in the shop.</li>
+                <li>Inventory's 'I', harvest on top.</li>
+                <li>'V' for vision, see it yourself.</li>
+                <li>And finally, the sacred 'S' </li>
+                <li>Snake of Ouroboros, shows time stop!</li>
+                <li>But there is 'R', redo can be poss.</li>
+
+            </ul>
+            <p>Enjoy your time at Legiea's farm!</p>
+        </div>
+    </div>
+    <audio controls loop class="audio-player">
+        <source src="js/music/gamebgm.mp3" type="audio/ogg">
+    </audio>
+</body>
+</html>

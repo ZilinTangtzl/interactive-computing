@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js"></script>
+
+    <!-- load in the p5 sound library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.js"></script>
+
+    <!-- your custom sketch code -->
+    <script src="sketch.js"></script>
+
+    <!-- custom CSS styles for this page -->
+    <style>
+        body {
+            background-color: #121212; 
+            color: white; 
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh;
+            flex-direction: column; 
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .game-info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <title>Breakout Game</title>
+  </head>
+  <body>
+    <div class="game-info">
+        <h1>Breakout Game</h1>
+        <!-- <h2>Description:</h2> -->
+        <p>Use the "A" and "D" keys to move the paddle to left and right, and bounce the ball to collect treasures.<br>
+          The game will reset if the ball falls off the screen. Click to start the game!</p>
+    </div>
+
+  </body>
+</html>
