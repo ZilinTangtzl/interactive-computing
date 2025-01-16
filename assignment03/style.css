@@ -1,0 +1,254 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+
+#gameDescription {
+    margin: 10px;
+    /* padding: 20px; */
+
+}
+
+#mainContainer {
+    display: flex;
+    justify-content: space-between;
+    height: 600px;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+
+}
+
+#canvasContainer {
+    width: 220px;
+    height: 600px;
+    background-color: #111;
+}
+
+#crewCanvasContainer iframe {
+    border: none;
+    border: 5px solid #080b3347;
+
+}
+
+#controlPanel {
+    width: 220px;
+    background-color: #222;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    position: relative;
+    height: 600px;
+    /* border: 10px solid #cfd2ff; */
+    border: 5px solid #080b3347;
+
+
+}
+
+#gameCanvas {
+    width: calc(100% - 440px); 
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#controlPanel label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#controlPanel progress {
+    width: 100%;
+}
+
+#warpButton,
+#pauseButton {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+#startScreen,
+#endScreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 3;
+}
+
+#startScreen button,
+#endScreen button {
+    padding: 10px 20px;
+    margin: 10px;
+}
+
+#endTitle {
+    margin-bottom: 20px;
+}
+
+#highestScoreStatus {
+    background-color: #333;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#highestScoreStatus label {
+    font-size: 15px;
+    color: #ffffff;
+}
+
+#controlPanel span {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#clearHistoryButton {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#clearHistoryButton:hover {
+    background-color: #666;
+}
+
+.startSpeech {
+    font-family: 'Afacad Flux', sans-serif;
+    font-weight: 400;
+    font-size: 1.2em;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+#difficultyButtons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#difficultyButtons button {
+    padding: 10px 20px;
+    margin: 0 10px;
+}
+
+#gameInstructions {
+    /* padding:10px; */
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: #fff; 
+    padding: 20px;
+    position: relative;
+    margin-top: 50px; 
+    clear: both;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    z-index: 1;
+}
+
+#gameInstructions ul {
+    list-style-type: none; 
+    padding: 0;
+}
+
+#gameInstructions li {
+    margin-bottom: 10px; 
+}
+
+html, body {
+    overflow-x: hidden; 
+}
+
+
+
+
+#designOverview {
+    /* max-width: 1200px;  */
+    width: 80%;
+    margin: 0 auto; 
+    padding: 20px;   
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px; 
+    /* color: #595762; */
+    color: #847fb4;
+
+}
+
+#designOverview h2 {
+    font-size: 2em; 
+    margin-bottom: 10px; 
+}
+
+#designOverview p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* #screenshots img {
+    width: 80%;
+    display: block; 
+    margin: 20px auto; 
+    max-width: 100%;
+    height: auto; 
+} */
+
+
+#screenshots img {
+    width: 80%; 
+    height: auto; 
+    display: block; 
+    margin: 20px auto; 
+    max-width: 900px; 
+}
+
+
+a {
+    color: #e07cffa2;
+    text-decoration: none; 
+}
+
+a:hover {
+    color: #bee2ff; 
+    text-decoration: underline; 
+}
+
+
+a:visited {
+    color: #e07cffa2;
+}

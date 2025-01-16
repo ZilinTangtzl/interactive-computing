@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Play</title>
+    <style>
+        @font-face {
+            font-family: 'OldLondon';
+            src: url('js/fonts/OldLondon.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'Sherwood';
+            src: url('js/fonts/Sherwood.ttf') format('truetype');
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Sherwood', sans-serif;
+            background: linear-gradient(to bottom, #d0b9dd, #2b0475);
+        }
+
+        .container {
+            background-size: cover;
+            padding: 20px;
+            background-image: url('js/images/background.png');
+            box-shadow: 0 4px 8px rgba(220, 217, 227, 0.2);
+            border-radius: 8px;
+            overflow-y: auto;
+            max-height: 80vh;
+            position: relative;
+        }
+        
+        h1 {
+            font-family: 'OldLondon', serif;
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #41156c;
+        }
+
+        .content {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #2d2d9e;
+            text-align: justify;
+        }
+
+        
+        .return-button {
+            display: inline-block;
+            font-size: 16px;
+            padding: 10px 20px;
+            color: #ffffff;
+            background-color: #41156c;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            font-family: 'Sherwood', sans-serif;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .return-button:hover {
+            background-color: #5a1a9f;
+        }
+
+        
+        .audio-player {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="return-button">Return to Home</a>
+    <audio controls loop class="audio-player">
+        <source src="js/music/gamebgm.mp3" type="audio/ogg">
+    </audio>
+    <div class="container">
+        <h1>Authors</h1>
+        <div class="content">
+            
+            <p>This game is made by Tianpei Hu, Zilin Tang </p>
+            <p></p>
+            <ul>
+                <li>Please follow instructions and enjoy!</li>
+                <li>Thank you for playing! </li>
+                
+            </ul>
+            <p>Good luck, and have fun!</p>
+        </div>
+    </div>
+
+</body>
+</html>

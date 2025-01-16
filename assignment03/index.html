@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Star Trek: Space Adventure</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+    <script src="classes.js"></script>
+    <script src="sketch.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Star Trek: Space Adventure</h1>
+
+    <div id="gameDescription">
+        <p>Welcome aboard, Captain! You will command the USS Enterprise NCC-1701 as it travels through space to complete missions. Maintain the integrity of your starship, avoid obstacles, and use the warp drive wisely. Good luck, Captain!</p>
+    </div>
+
+    <div id="mainContainer">
+
+        <div id="crewCanvasContainer">
+            <iframe src="crew_canvas.html" width="220" height="600" frameborder="0"></iframe>
+        </div>
+
+        <div id="gameCanvas">
+        </div>
+        <div id="controlPanel">
+            <div id="highestScoreStatus">
+                <label>Best Voyage Record:</label>
+                <span id="highestScoreDisplay">0</span>
+            </div>
+            <button id="clearHistoryButton" onclick="clearHistory()">Clear Captain's Log</button>
+
+            <div id="scoreStatus">
+                <label>Current Mission Score:</label>
+                <span id="currentScore">0</span>
+            </div>
+            <div id="shieldStatus">
+                <label>Shield Energy:</label>
+                <progress id="shieldBar" value="100" max="100"></progress>
+                <span id="shieldValue">100%</span>
+            </div>
+            <div id="timeStatus">
+                <label>Time Remaining:</label>
+                <span id="remainingTime">0 seconds</span>
+            </div>
+            <div id="warpStatus">
+                <label>Warp Engine Status:</label>
+                <span id="warpState">Ready for Activation</span>
+            </div>
+            <button id="warpButton" onclick="activateWarp()">Engage Warp</button>
+            <button id="pauseButton" onclick="togglePause()">Pause Exploration</button>
+        </div>
+    </div>
+    <div id="startScreen">
+        <h2>Star Trek: Space Adventure</h2>
+        <p class="startSpeech">
+            SPACE: THE FINAL FRONTIER.<br>THESE ARE THE VOYAGES OF THE STARSHIP ENTERPRISE.<br>ITS FIVE-YEAR MISSION: TO EXPLORE STRANGE NEW WORLDS;<br>TO SEEK OUT NEW LIFE AND NEW CIVILIZATIONS;<br>TO BOLDLY GO WHERE NO ONE HAS GONE BEFORE!
+        </p>
+        <h3>Select difficulty level:</h3>
+        <div id="difficultyButtons">
+            <button onclick="selectDifficulty('Easy')">Easy</button>
+            <button onclick="selectDifficulty('Medium')">Medium</button>
+            <button onclick="selectDifficulty('Hard')">Hard</button>
+        </div>
+    </div>
+
+    <!-- end screen -->
+    <div id="endScreen">
+        <h2 id="endTitle">Mission Terminated</h2>
+        <p id="endMessage">Your starship mission was unsuccessful.</p>
+        <p>Score: <span id="currentScoreDisplay">0</span></p>
+        <p>Survival Time: <span id="currentSurvivalTimeDisplay">0</span> seconds</p>
+        <p>Reached Destination: <span id="currentGameSuccessDisplay">No</span></p>
+        <p>Achievements Earned:</p>
+        <ul id="endAchievementsList">
+        </ul>
+        <p id="damageReport">Asteroid Collisions: 0</p>
+        <p id="damageReportMessage"></p>
+        <p id="totalCrystalsCollected">Total energy crystals collected: 0</p>
+        <button onclick="restartGame()">Restart Mission</button>
+        <button onclick="returnToMenu()">Return to Starfleet Command</button>
+    </div>
+
+    <!-- instructions -->
+    <div id="gameInstructions" style="display: none;">
+        <h2>Game Instructions</h2>
+        <ul>
+            <li>Welcome to Star Trek: Space Adventure! You are the Captain of the USS Enterprise NCC-1701, and your mission is to navigate through space, avoid obstacles, collect energy crystals, and use the warp drive to complete your mission.</li>
+        </ul>
+
+        <h2>Controls:</h2>
+        <ul>
+            <li>Move the starship: Use arrow keys (← ↑ → ↓)</li>
+            <li>Activate warp: Press the 'Shift' or 'A' key (if conditions are met)</li>
+            <li>Pause the game: Click the "Pause Exploration" button</li>
+            <li>Accept rescue missions: When a distress signal is received, press 'Y'</li>
+            <li>Decline rescue missions: Press 'N' to refuse the mission</li>
+        </ul>
+
+        <h2>Game Mechanics:</h2>
+        <ul>
+            <li>Shield Value: The starship has a shield that depletes when hitting obstacles</li>
+            <li>Energy Crystals: Collect energy crystals to restore shield energy</li>
+            <li>Warp Drive: Use the warp drive to accelerate and avoid obstacles</li>
+            <li>Rescue Missions: Occasionally, you will receive rescue requests from other ships. Accepting these missions increases game time and difficulty.</li>
+            <li>Achievements: Unlock achievements by completing specific tasks, such as collecting crystals or completing rescue missions.</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

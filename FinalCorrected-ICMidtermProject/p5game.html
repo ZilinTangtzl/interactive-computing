@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ghost Farm - Game</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.min.js"></script>
+
+    <!-- <script src="js/p5.min.js"></script> -->
+
+    <script src="classes/Item.js"></script>
+    <script src="classes/Inventory.js"></script>
+    <script src="classes/DialogBox.js"></script>
+    <script src="classes/TipBox.js"></script>
+    <script src="classes/Crop.js"></script>
+    <script src="classes/Field.js"></script>
+    <script src="classes/GameManager.js"></script>
+    <script src="classes/Player.js"></script>
+    <script src="main.js"></script>
+
+    <style>
+        @font-face {
+            font-family: 'OldLondon';
+            src: url('js/fonts/OldLondon.ttf') format('truetype');
+        }
+        
+        @font-face {
+            font-family: 'Sherwood';
+            src: url('js/fonts/Sherwood.ttf') format('truetype');
+        }
+
+        body {
+            font-family: 'PixelNoir', sans-serif;
+            background-color: #6664a6;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'OldLondon', serif;
+            color: white;
+            font-size: 48px;
+            margin: 20px 0;
+        }
+
+        a.return-home {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: rgba(106, 13, 173, 0.6);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-family: 'Sherwood', sans-serif;
+        }
+
+        a.return-home:hover {
+            background-color: rgba(106, 13, 173, 0.8);
+        }
+
+        .music-control {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(106, 13, 173, 0.6);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            padding: 0;
+        }
+
+        .music-control:hover {
+            background-color: rgba(106, 13, 173, 0.8);
+            transform: scale(1.1);
+        }
+
+        .music-control img {
+            width: 20px;
+            height: 20px;
+            filter: invert(1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Ligeia's Farm</h1>
+    <a class="return-home" href="index.html">Return to Home</a>
+
+    <audio id="bgMusic" loop>
+        <source src="js/music/gamebgm.mp3" type="audio/ogg">
+    </audio>
+
+    <button class="music-control" onclick="toggleMusic()" title="Toggle Music">
+        <img id="musicIcon" src="js/images/volume-up.svg" alt="music control">
+    </button>
+
+    <script>
+        const bgMusic = document.getElementById('bgMusic');
+        const musicIcon = document.getElementById('musicIcon');
+        
+        bgMusic.volume = 0.5;
+
+        if (localStorage.getItem('musicMuted') === 'true') {
+            bgMusic.muted = true;
+            musicIcon.src = 'js/images/volume-mute.svg';
+        }
+
+        function toggleMusic() {
+            if (bgMusic.muted) {
+                bgMusic.muted = false;
+                musicIcon.src = 'js/images/volume-up.svg';
+                localStorage.setItem('musicMuted', 'false');
+            } else {
+                bgMusic.muted = true;
+                musicIcon.src = 'js/images/volume-mute.svg';
+                localStorage.setItem('musicMuted', 'true');
+            }
+        }
+
+        document.addEventListener('click', function() {
+            if (bgMusic.paused) {
+                bgMusic.play();
+            }
+        }, { once: true });
+    </script>
+</body>
+</html>
